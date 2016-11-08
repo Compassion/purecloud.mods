@@ -51,9 +51,9 @@ function mutationHandler (mutationRecords) {
                   console.log('popping case');
                   var subject = $('.message-subject').first().text();
                   var n = subject.indexOf('id:');
-                  var url = 'https://compassionau.my.salesforce.com/' + subject.substring(n+3)
+                  var url = 'https://compassionau.my.salesforce.com/' + subject.substring(n+3);
                   console.log('url: ' + url);
-                  window.open(url,'_blank')
+                  window.open(url,'_blank');
               });
             }
         }
