@@ -1,15 +1,14 @@
 // ==UserScript==
 // @name         PureCloud.Mods
 // @namespace    https://github.com/Compassion/salesforce.mods
-// @version      1
+// @version      2
 // @description  PureCloud.Mods
 // @author       Mark Harvey
 // @include      https://apps.mypurecloud.com.au/directory/*
 // @grant        none
-// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @updateURL       https://github.com/Compassion/purecloud.mods/raw/master/purecloud.mods.user.js
 // @downloadURL     https://github.com/Compassion/purecloud.mods/raw/master/purecloud.mods.user.js
-// @updateVersion   1
+// @updateVersion   2
 // @homepageURL     https://github.com/Compassion/purecloud.mods
 // @supportURL      https://github.com/Compassion/purecloud.mods/issues
 // ==/UserScript==
