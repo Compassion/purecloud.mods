@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         PureCloud.Mods
 // @namespace    https://github.com/Compassion/salesforce.mods
-// @version      2
+// @version      3
 // @description  PureCloud.Mods
 // @author       Mark Harvey
 // @include      https://apps.mypurecloud.com.au/directory/*
 // @grant        none
 // @updateURL       https://github.com/Compassion/purecloud.mods/raw/master/purecloud.mods.user.js
 // @downloadURL     https://github.com/Compassion/purecloud.mods/raw/master/purecloud.mods.user.js
-// @updateVersion   2
+// @updateVersion   3
 // @homepageURL     https://github.com/Compassion/purecloud.mods
 // @supportURL      https://github.com/Compassion/purecloud.mods/issues
 // ==/UserScript==
@@ -18,8 +18,24 @@
 (function() {
     'use strict';
     console.log('Loaded Compassion.PureCloud.Mods');
-    startMutationObserver();
+    waitForLoad();
 })();
+
+function waitForLoad()
+{
+    if($("#ember3223").length == 0)
+    {
+      console.log('Waiting for Ember load');
+      setTimeout(function(){
+        waitForLoad();
+      }, 500);
+    }
+    else
+    {
+        console.log('Ember Loaded starting Mutation Observer');
+        startMutationObserver();
+    }
+}
 
 function startMutationObserver() {
   var targetNodes         = $("#ember3223");
